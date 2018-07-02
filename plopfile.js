@@ -6,15 +6,16 @@
 
 const fs = require('fs');
 const path = require('path');
-const componentGenerator = require('./generators/component/index.js');
-const containerGenerator = require('./generators/container/index.js');
-const domainGenerator = require('./generators/domain/index.js');
+const specGenerator = require('./generators/spec/index.js');
+const pageobjectGenerator = require('./generators/pageobject/index.js');
+
 const appRoot = require('app-root-path').resolve(process.env.npm_package_reactGenerate_srcPath);
 
 module.exports = plop => {
-  plop.setGenerator('domain', domainGenerator);
-  plop.setGenerator('container', containerGenerator);
-  plop.setGenerator('component', componentGenerator);
+  plop.setGenerator('spec', specGenerator);
+  plop.setGenerator('pageobject', pageobjectGenerator);
+
+  // Ni idea que es esto de los containers
   plop.addHelper('directory', comp => {
     try {
       fs.accessSync(path.join(appRoot, `/containers/${comp}`), fs.F_OK);

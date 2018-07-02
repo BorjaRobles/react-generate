@@ -1,34 +1,33 @@
 {
-  "name": "react-generate",
-  "description": "Cornerjob react components, containers, domains generator",
-  "version": "0.6.0",
+  "name": "cypress-generate",
+  "description": "Generator for cypress pageObjects sharedcontext and specs",
+  "version": "0.1.0",
   "main": "index.js",
   "bin": {
     "reactgen": "./index.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "generate:domain": "node index.js --domains",
-    "generate:container": "node index.js --container",
-    "generate:component": "node index.js --component"
+    "generate:pageobject": "node index.js --pageobject",
+    "generate:spec": "node index.js --spec"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/cornerjob/react-generate.git"
   },
   "keywords": [
-    "react",
+    "cypress",
     "generators",
     "cli"
   ],
-  "author": "cornerjob",
+  "author": "borja",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/cornerjob/react-generate/issues"
   },
   "homepage": "https://github.com/cornerjob/react-generate",
   "reactGenerate": {
-    "srcPath": "./src",
+    "srcPath": "./cypress",
     "testFileExtension": "test"
   },
   "dependencies": {

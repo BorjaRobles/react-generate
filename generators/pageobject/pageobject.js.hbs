@@ -1,0 +1,13 @@
+// {{ camelCase name }}.page.js
+import Page from './page';
+
+class {{ camelCase name }} extends Page {
+
+    get locatorexample()  { cy.get('#locator'); }
+
+    open() {
+        super.visit('pagetovisit');
+    }
+}
+
+export default new {{ camelCase name }}();
